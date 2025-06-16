@@ -1,5 +1,4 @@
-```markdown
-# 🔔 Observer Pattern – Amazon "Notify Me" Clone
+## 1.Observer Pattern – Amazon "Notify Me" Clone
 
 This project illustrates the **Observer Design Pattern** through a simulation of Amazon's "Notify Me" feature for out-of-stock products.
 
@@ -27,11 +26,10 @@ The **Observer Pattern** establishes a one-to-many relationship where a subject 
 
 ## 🧪 Sample Output
 
-```bash
 Hi abc@gmail.com! Your item iphone is back in stock! (2 available)
 SMS sent to +19876543210 about iphone restock.
 
-Folder Structure
+## Folder Structure
 design.pattern.observer/
 ├── observable/
 │   ├── ProductObservable.java
