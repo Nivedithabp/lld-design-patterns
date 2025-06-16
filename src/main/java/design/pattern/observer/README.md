@@ -31,3 +31,5 @@ SMS sent to +19876543210 about iphone restock.
 
 ![uml](https://github.com/user-attachments/assets/36f9fdd2-80a4-46c8-b5e7-63c20826c548)
 
+Full article : https://medium.com/@bpniveditha/how-amazons-notify-me-perfectly-illustrates-the-observer-pattern-fac4663a86d4
+
