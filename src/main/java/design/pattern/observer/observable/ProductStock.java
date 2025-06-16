@@ -4,6 +4,8 @@ import design.pattern.observer.observer.StockObserver;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
 public class ProductStock implements ProductObservable{
     private final String product;
     private int quantity = 0;
@@ -18,9 +20,13 @@ public class ProductStock implements ProductObservable{
     @Override
     public void removeObserver(StockObserver stockObserver) { stockObservers.remove(stockObserver); }
     @Override
-    public void notifyObservers() {
+    public void notifyObservers()  {
         for (StockObserver stockObserver : stockObservers) {
-            stockObserver.update(product ,  quantity );
+            try {
+                stockObserver.update(product, quantity);
+            } catch (Exception e) {
+                log.print("Observer failed: " + e.getMessage());
+            }
         }
     }
 
