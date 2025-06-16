@@ -9,10 +9,10 @@ public class Cheese extends ToppingDecorator  implements Pizza {
 
     private int countCheeseLayers() {
         int count = 0;
-        Pizza current = basePizza;
+        Pizza current = decoratedPizza;
         while (current instanceof ToppingDecorator) {
             if (current instanceof Cheese) count++;
-            current = ((ToppingDecorator) current).basePizza;
+            current = ((ToppingDecorator) current).decoratedPizza;
         }
         return count;
     }
@@ -21,14 +21,14 @@ public class Cheese extends ToppingDecorator  implements Pizza {
     public String getDescription() {
         int cheeseCount = countCheeseLayers();
         if (cheeseCount >= 1) {
-            return basePizza.getDescription() + ", Double Cheese has 10% discount";
+            return decoratedPizza.getDescription() + ", Double Cheese has 10% discount";
         }
-        return basePizza.getDescription() + ", Cheese";
+        return decoratedPizza.getDescription() + ", Cheese";
     }
 
     @Override
     public double getCost() {
-        double cost = basePizza.getCost() + 1.25;
+        double cost = decoratedPizza.getCost() + 1.25;
         int cheeseCount = countCheeseLayers();
         if (cheeseCount >= 1) {
             cost -= 0.50;
