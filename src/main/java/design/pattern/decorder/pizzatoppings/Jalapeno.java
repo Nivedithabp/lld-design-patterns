@@ -1,6 +1,4 @@
-package design.pattern.decorder.toppings;
-
-import design.pattern.decorder.base.Pizza;
+package design.pattern.decorder.pizzatoppings;
 
 public class Jalapeno  extends ToppingDecorator {
     public Jalapeno(Pizza pizza) { super(pizza); }

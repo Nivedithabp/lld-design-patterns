@@ -1,6 +1,4 @@
-package design.pattern.decorder.toppings;
-
-import design.pattern.decorder.base.Pizza;
+package design.pattern.decorder.pizzatoppings;
 
 public class Cheese extends ToppingDecorator  implements Pizza {
     public Cheese(Pizza pizza) {

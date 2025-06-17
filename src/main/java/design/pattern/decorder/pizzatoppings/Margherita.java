@@ -1,4 +1,4 @@
-package design.pattern.decorder.base;
+package design.pattern.decorder.pizzatoppings;
 
 public class Margherita implements Pizza {
     @Override
